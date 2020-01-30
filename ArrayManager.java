@@ -99,16 +99,16 @@ public class ArrayManager
     public int removeElement(int location)
     {
         // Hint: there are 2 errors in this method. One of the errors is in the for loop body.
-        int value;
+        int value = -999;
 
         if(location < nextAvailable)
         {
             value = iArr[location];
             for(int i = location; i < nextAvailable - 1; i++)
             {
-                iArr[i] = iArr[i - 1];
+                iArr[i] = iArr[i + 1];
             }
-            nextAvailable--;
+            nextAvailable++;
             iArr[nextAvailable] = -999;
         }
 
