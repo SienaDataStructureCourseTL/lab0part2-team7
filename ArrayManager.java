@@ -39,7 +39,12 @@ public class ArrayManager
      */
     public ArrayManager(int numElements)
     {
-        nextAvailable = 0;
+        Integer[] arr = new Integer[numElements];
+        for (int i = 0; i <= arr.length - 1; i++)
+        {
+            arr[i] = -999;
+        }
+
     }
 
     /**
@@ -52,7 +57,10 @@ public class ArrayManager
      */
     public void addElement(int value)
     {
-        iArr[nextAvailable] = value;
+        if (nextAvailable)
+        {
+            iArr[nextAvailable] = value;
+        }
         nextAvailable++;
     }
 
@@ -74,7 +82,7 @@ public class ArrayManager
         // Hint: there are two errors in the for loop header
         if(nextAvailable < iArr.length && location <= nextAvailable)
         {
-            for(int i = iArr.length; i > location; i++)
+            for (int i = iArr.length - 1; i > location; i++)
             {
                 iArr[i] = iArr[i - 1];
             }
