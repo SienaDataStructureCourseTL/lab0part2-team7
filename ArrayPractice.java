@@ -4,8 +4,8 @@
  * Complete each of the following methods according to the method comments.
  * DO NOT CHANGE THE METHOD HEADERS.
  *
- * @author (your names)
- * @version (a version number or a date)
+ * @author Lydia Russom
+ * @version 01/29/2019
  */
 public class ArrayPractice
 {
@@ -17,7 +17,12 @@ public class ArrayPractice
      */
     public static double sum(Double arr[])
     {
-        return -1.0;
+        double sum = 0.0;
+        for (int i = 0; i <= arr.length - 1; i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
     }
 
     /**
@@ -28,7 +33,12 @@ public class ArrayPractice
      */
     public static int sum(Integer arr[])
     {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i <= arr.length - 1; i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
     }
     
     /**
@@ -39,7 +49,15 @@ public class ArrayPractice
      */
     public static int largest(Integer arr[])
     {
-        return -1;
+        int largest = arr[0];
+        for (int i = 1; i <= arr.length - 1; i++)
+        {
+            if (arr[i] > largest)
+            {
+                largest = arr[i];
+            }
+        }
+        return largest;
     }
     
     /**
@@ -53,7 +71,15 @@ public class ArrayPractice
      */
     public static int countLarger(Integer arr[], int value)
     {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i <= arr.length - 1; i++)
+        {
+            if (arr[i] > value)
+            {
+                sum = sum + 1;
+            }
+        }
+        return sum;
     }
     
     /**
@@ -66,7 +92,15 @@ public class ArrayPractice
      */
     public static int countTrue(Boolean arr[])
     {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i <= arr.length - 1; i++)
+        {
+            if (arr[i])
+            {
+                sum = sum + 1;
+            }
+        }
+        return sum;
     }
     
     /**
@@ -81,7 +115,12 @@ public class ArrayPractice
      */
     public static Integer[] stringLengths(String arr[])
     {
-        return null;
+        Integer[] arr2 = new Integer[arr.length];
+        for (int i = 0; i <= arr.length - 1; i++)
+        {
+            arr2[i] = arr[i].length();
+        }
+        return arr2;
     }
     
 }
